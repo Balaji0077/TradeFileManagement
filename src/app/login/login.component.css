@@ -1,0 +1,133 @@
+*{
+  box-sizing:border-box;
+  font-family:"Roboto";
+}
+.login-1{
+  background-image:linear-gradient(#ffc533,#ffbf1f);
+  color:#334155;
+  height:60vh;
+  width:30vw;
+  border-top-left-radius:16px;
+  border-bottom-left-radius:16px;
+  padding:15px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.login1-heading{
+  font-family:"Roboto";
+  font-weight:bold;
+  color:#000000;
+}
+.login-2{
+    background-color:#0f172a;
+    height:60vh;
+    width:30vw;
+    border-top-right-radius:16px;
+    border-bottom-right-radius:16px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:15px;
+    overflow:auto;
+}
+.login-component{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+}
+.file-trade-image{
+  width:100%;
+  border-radius:20px;
+  height:280px;
+}
+.login-1-container{
+   display:flex;
+   flex-direction:column;
+   justify-content:center;
+   align-items:center;
+}
+.login-image{
+   width:270px;
+   height:72px;
+   border-radius:8px;
+   padding-bottom:10px;
+}
+.login-2-container{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding:5px;
+}
+.form-label-input{
+  display:flex;
+  flex-direction:column;
+  padding:8px;
+}
+.login-label-style{
+  color:#ffc533;
+  padding-bottom:5px;
+  
+}
+.login-input-style{
+  width:260px;
+  padding:8px;
+  outline:none;
+  font-weight:600;
+  border-width:0px;
+  border-radius:4px;
+  border:3px solid #ffc533;
+}
+.login-btn{
+  background-color:#ffc533;
+  color:#272c47;
+  width:260px;
+}
+.newuser-signup-container{
+  display:flex;
+  justify-content:center;
+}
+.new-user-text{
+  color:#ffc533;
+  padding:0px;
+  margin:0px;
+  margin-right:8px
+}
+.sign-up-btn{
+  color:#ffc533;
+  padding:0px;
+  cursor:pointer;
+}
+.warning-msg{
+  color:red;
+  margin:0px;
+}
+.register-successfull-box{
+  position:fixed;
+  background-image:linear-gradient(to right,#F0A1A1,#B5B0A5,#F0BD24,#E5DDEB);
+  display:flex;
+  flex-direction:row;
+  left:82vw;
+  padding:10px;
+  border-top-left-radius:10px;
+  border-bottom-left-radius:10px;
+}
+.right-img{
+   width:20%;
+}
+.user-successfully-heading{
+  font-family:"Roboto";
+  font-size:15px;
+  font-weight:bold;
+}
+
+@media (max-width:993px){
+  .login-1{
+    display:none;
+  }
+  .login-2{
+     width:80%;
+     border-radius:20px;
+  }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+     <div class="file-detail-container"> 
+        
+    <!-- Delete Popup Confirmation-->
+       <div *ngIf="deleteConfiramtion" class="delete-confiramtion">
+           <img src="https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678069-sign-error-128.png" class="wrong-icon"/>
+           <h1>Are you Sure?</h1>
+           <p>Do you really want to delete this record?</p>
+           <h1>{{data.filename}}</h1>
+           <div>
+              <button class="delete-confirmation-btn-cancel" (click)="deleteOnCancel()">Cancel</button>
+              <button class="delete-confirmation-btn-delete" (click)="delteOnSuccess(data.id)">Delete</button>
+           </div>
+       </div>
+       <div class="file-detail-background">
+        <h1 class="file-details-heading">File Details</h1>
+        <form>
+            <div class="file-detail-display-container special-style">
+                <img class="file-image " src="https://cdn4.iconfinder.com/data/icons/ais/128/Id.png"/>
+                <h2 class="file-column-data">{{data.id}}</h2>
+            </div>
+            <div class="file-detail-display-container special-style-1">
+                <img class="file-image " src="https://cdn3.iconfinder.com/data/icons/file-extension-vol-1/48/csv_file_database_extension_data-128.png"/>
+                <h2 class="file-column-data">{{data.filename}}</h2>
+            </div>
+            <div class="file-detail-display-container">
+                <img class="file-image " src="https://cdn3.iconfinder.com/data/icons/flat-common-4/32/calendar-upload-128.png"/>
+                <h2 class="file-column-data">{{data.localDate}}</h2>
+            </div>     
+             
+            <div class="file-detail-display-container">
+                <h1 class="file-column">Status: </h1>
+                <h2 class="file-column-data">{{data.status}}</h2>
+            </div>
+            
+            <div class="file-detail-display-container special-style-3">
+                <h1 class="file-column">No of Records:</h1>
+                <h2 class="file-column-data">{{data.recordCount}}</h2>
+            </div>
+            <div class="file-detail-display-container special-style-4">
+                <img class="file-image " src="https://cdn1.iconfinder.com/data/icons/hawcons/32/699351-icon-78-document-error-128.png"/>
+                <h2 class="file-column-data">{{data.errors===""?'None':data.errors}}</h2>
+            </div>
+            
+         <div class="file-detail-btn-container">
+            <input type="button" value="Update Status" (click)="update(data.id)" class="update-btn1 "/>
+            <input type="button" value="Delete" (click)="delete()" class="update-btn1"/>
+        </div>
+            </form>
+        </div> 
+
+    </div>
+    </body>
+
+</html>

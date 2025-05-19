@@ -1,0 +1,126 @@
+*{
+    font-family:"Roboto";
+   
+}
+.file-detail-background{
+    background-image:url("https://www.svgrepo.com/show/375297/txt-document.svg");
+    background-size:cover;
+    height:88vh;
+    width:45%;
+    padding:20px;
+    margin-top:30px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:center;
+}
+.file-detail-container{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+.file-detail-display-container{
+    display:flex;
+    align-items:center;
+    background-color:#ffffff33;
+    padding:5px;
+    border-radius:8px;
+    margin:10px;
+    border:2px solid black;
+}
+.file-details-heading{
+    color:#ea580c;
+    font-weight:bolder;
+}
+.special-style{
+    border-top-right-radius:55px;
+}
+.special-style-1{
+    border-top-right-radius:45px;
+}
+.special-style-3{
+    border-bottom-left-radius:45px;
+}
+.special-style-4{
+    border-bottom-left-radius:55px;
+}
+.file-column{
+    color:#451111;
+   font-weight:bolder;
+   font-size:20px;
+   margin-right:3px;
+}
+.file-image{
+    width:40px;
+    margin:10px;
+}
+.file-column-data{
+    font-weight:bolder;
+    font-size:22px;
+    color:#000073;
+    text-decoration:underline;
+    margin-bottom:10px;
+    
+
+}
+.update-btn1{
+    background-color:#ea580c;
+    color:#ffffff;
+    padding:10px;
+    border-radius:5px;
+    margin:20px;
+    outline:none;
+    border-width:0px;
+    cursor:pointer;
+    font-size:16px;
+}
+.file-detail-btn-container{
+    display:flex;
+    justify-content:center;
+}
+.update-btn1:hover{
+    border:1px solid #000000;
+}
+.delete-confiramtion{
+  background-color:#E8E8E8;
+  padding:40px;
+  position:fixed;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  top:0%;
+}
+.wrong-icon{
+    width:80px;
+}
+.delete-confirmation-btn-cancel{
+ background-color:rgb(182, 180, 177);
+ padding:10px;
+ border-width:0px;
+ outline:none;
+ border:1px solid #f2f2f2;
+ border-radius:4px;
+ color:#ffffff;
+ margin:5px;
+ cursor:pointer;
+}
+.delete-confirmation-btn-delete{
+    background-color:rgb(249, 8, 8);
+    padding:10px;
+    border-width:0px;
+    outline:none;
+    border:1px solid #f2f2f2;
+    border-radius:4px;
+    color:#ffffff;
+    margin:5px;
+    cursor:pointer;
+   }
+
+@media(max-width:993px){
+    .file-detail-background{
+        background-image:linear-gradient(to right,#F7CF05,#57C785,#EDDD53);
+        width:100%;
+    }
+}

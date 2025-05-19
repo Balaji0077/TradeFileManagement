@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+<div class="update-status-container"> 
+  <h1 class="update-status-heading">Update Status</h1>  
+<div class="update-bg-container">
+ <div>
+  <p>FileName:</p> 
+  <h1>{{dataObj.filename}}</h1>
+</div>  
+<div>
+  <p>Current status:</p>
+  <h1>{{currentStatus}}</h1>
+</div>  
+  <p>Update Status:</p>
+  <select name="selectStatus" [(ngModel)]="updatedStatus" class="select-update">
+    <option value="NEW" *ngIf="newStatus">NEW</option>
+    <option value="FAILED" *ngIf="failedStatus">FAILED</option>
+    <option value="PROCESSED" *ngIf="processedStatus">PROCESSED</option>
+  </select>
+  <div class="update-component-container">
+  <button (click)="okUpdateStatus()" class="update-status-btn">Update</button>
+</div>
+</div>
+</div> 
+</body>
+</html>

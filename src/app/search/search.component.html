@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div class="filter-container">
+            <div>
+                <h1>Filter</h1>
+            </div>
+            
+            <div>
+                <input type="search" placeholder="Search File Names" name="filename" class="search-file-bar" [(ngModel)]="filename"/>
+            </div>
+            <br/>
+            <div>
+                 <p>Category</p>
+                 <select name="category" [(ngModel)]="status" class="category">
+                    <option value="">No select</option>
+                    <option value="NEW">New</option>
+                    <option value="FAILED" >Failed</option>
+                    <option value="PROCESSED">Processed</option>
+                 </select>
+            </div>
+            <br/>
+            <div>
+                <input type="number" placeholder="Search By id's" class="search-file-bar" name="id" [(ngModel)]="id"/>
+            </div>
+            <br/>
+            <div>
+                <div class="date-search-container">
+                    <label class="date-search-heading">From Date</label>
+                    <input type="date" name="fromDate" [(ngModel)]="fromDate"/>
+                 </div>
+                 <br/>
+                 <div class="date-search-container">
+                    <label class="date-search-heading">To Date</label>
+                    <input type="date" name="toDate" [(ngModel)]="toDate"/>
+                 </div>
+            </div>
+            <br/>
+            <input type="button" value="Apply Filter" class="apply-filter-btn" (click)="applyFilter()"/>
+            <input type="button" value="Clear Filter" class="apply-filter-btn" (click)="clearFilter()"/>
+        </div>
+    </body>
+</html>
+

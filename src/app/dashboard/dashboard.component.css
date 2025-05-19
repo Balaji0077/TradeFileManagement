@@ -1,0 +1,53 @@
+.dashboard-container{
+    display:flex;
+    flex-direction:row;
+
+}
+.search-component{
+    width:20vw;
+}
+.viewfile-component{
+    width:80vw;
+}
+.successfull-box{
+    position:fixed;
+    background-image:linear-gradient(to right,#cbd2d9);
+    display:flex;
+    flex-direction:row;
+    left:80vw;
+    padding:20px;
+    border-top-left-radius:16px;
+    border-bottom-left-radius:16px;
+    font-family:"Roboto";
+  }
+  .right-img{
+    width:60px;
+ }
+ .file-upload-successfully-heading{
+    
+    font-family:"Roboto";
+    margin-top:10px;
+ }
+ .update-successfully-heading{
+    font-size:18px;
+    font-weight:bolder;
+    font-family:"Roboto";
+ }
+.dashboard-filename-heading{
+    font-weight:bold;
+}
+@media(max-width:993px){
+    .search-component{
+        width:90vw;
+
+    }
+    .viewfile-component{
+        width:90vw;
+    }
+    .dashboard-container{
+        display:flex;
+        flex-direction:column;
+    
+    }
+
+}

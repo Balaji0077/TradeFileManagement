@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<div class="login-component">
+    
+    <div class="login-1">
+        <div class="login-2-container">
+            <!-- <img src="https://dynamic.design.com/asset/logo/62121d53-7ccb-4908-9d28-51abe6f1908c/logo-search-grid-2x?logoTemplateVersion=1&v=638827166201470000&text=TradeSync+Solutions&colorpalette=purple" class="login-image"/> -->
+            <form (submit)="register()">
+              <div class="input-container">
+                  <div class="form-label-input">
+                      <label for="user" class="login-label-style" >Username</label>
+                      <input id="user" name="user" type="text" class="login-input-style" placeholder="Enter Username" [(ngModel)]="username" (blur)="usernameNullCheck()"/>
+                      <p class="warning-msg" *ngIf="usernameNull">*Username is required</p>
+                  </div>
+                  <div class="form-label-input">
+                      <label for="pass" class="login-label-style">Password</label>
+                      <input id="pass" name="pass" type="Password" class="login-input-style" placeholder="Enter Password" [(ngModel)]="password" (blur)="passwordNullCheck()"/>
+                      <p class="warning-msg" *ngIf="passwordNull">*Password is required</p>
+                  </div>
+                  <div class="form-label-input">
+                    <label class="login-label-style" for="role">Role</label>
+                       <select id="role" class="login-input-style" [(ngModel)]="role" name="role">
+                          <option value="Role_User">User</option>
+                          <option value="Role_Admin">Admin</option>
+                       </select>
+                  </div>
+                  <p *ngIf="warningadmin" class="warning-msg">*Invalid Credentials!</p>
+                  <p *ngIf="userwarning" class="warning-msg">*User Already exists.Please Login!</p>
+                  <div class="form-label-input">
+                      <button mat-button class="login-btn" type="submit">Register</button>
+                  </div>
+              </div>
+            </form>
+         </div>
+         <div class="newuser-signup-container">
+            <p class="new-user-text">Already have an account?</p>
+            <p class="sign-up-btn" [routerLink]="'/login'">Login</p>
+         </div>
+       
+
+    </div>
+    <div class="admin-box" *ngIf="adminBox">
+        <img src="https://cdn3.iconfinder.com/data/icons/internet-relative/200/Wrong-128.png" class="admin-wrong-icon" (click)="adminClose()"/>
+        <h1 class="admin-heading">Admin Check</h1>
+        <label for="admin" class="admin-label">Admin Password</label>
+        <input id="admin" class="admin-input" type="password" placeholder="Enter Admin Password" name="passwordadmin" [(ngModel)]="adminpassword"/>
+        <button class="admin-submit" (click)="admincheck()">Submit</button>
+    </div>
+    <div class="login-2">
+        <div class="login-1-container">
+            <!-- <h1 class="login1-heading">Trade File Management</h1> -->
+             <h1 class="login1-heading">Register</h1>
+            <img src="https://blacknight.blog/wp-content/uploads/2022/01/we-transfer-file-sharing-alternatives-1-500x383@2x.jpg" class="file-trade-image"/>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

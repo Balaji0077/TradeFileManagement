@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<div class="trade-container">
+    <div class="nav-bar">
+        <span [routerLink]="'/'"><img src="https://dynamic.design.com/asset/logo/62121d53-7ccb-4908-9d28-51abe6f1908c/logo-search-grid-2x?logoTemplateVersion=1&v=638827166201470000&text=TradeSync+Solutions&colorpalette=purple" class="logo-img" /></span>
+        <div class="nav-elements">
+            <!-- <p class="nav-item" [routerLink]="'login'">Login</p> -->
+             <div class="nav-element-icon-container" [routerLink]="'/upload'">
+                <img src="https://cdn0.iconfinder.com/data/icons/font-awesome-solid-vol-2/512/file-upload-128.png" alt="file" class="upload-icon"/>
+                <p class="nav-item" >Upload File</p>
+             </div>
+            <div class="nav-element-icon-container" [routerLink]="'/dashboard'">
+                <img src="https://cdn4.iconfinder.com/data/icons/doodle-4/155/dashboard-128.png" alt="file" class="upload-icon"/>
+                <p class="nav-item" >DashBoard</p>
+            </div>
+            
+            <div class="nav-element-icon-container" *ngIf="adminCheck" [routerLink]="'/admin'" >
+                <img src="https://cdn1.iconfinder.com/data/icons/material-core/20/settings-128.png" alt="file" class="upload-icon"/>
+                <p class="nav-item" >Admin Settings</p>
+            </div>
+        
+            <div class="nav-element-icon-container" (click)="logout()" *ngIf="isLoggedIn" >
+                <img src="https://cdn3.iconfinder.com/data/icons/remixicon-system/24/logout-circle-r-fill-128.png" alt="file" class="upload-icon"/>
+                <p class="nav-item"> Logout</p>
+            </div>
+            
+        </div>
+    </div>
+    <div class="router-container">
+        <h1 class="styleText">{{ displayStyleText}}</h1>
+        <router-outlet></router-outlet>
+     </div>
+</div>

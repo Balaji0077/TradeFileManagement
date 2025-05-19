@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+   <head>
+
+   </head>
+   <body>
+       <div class="admin-container">
+       
+        <div class="successfull-box" *ngIf="deleteCancelAdmin">
+            <h1 class="file-upload-successfully-heading">User Not Removed!</h1>
+            <img src="https://cdn1.iconfinder.com/data/icons/planning-15/256/Decision_2_Front.png" class="right-img"/>
+        </div>
+        <div class="successfull-box" *ngIf="deleteSuccessAdmin">
+            <h1 class="file-upload-successfully-heading">Deleted Successfully</h1>
+            <img src="https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Tick_Mark_Dark-1024.png" class="right-img"/>
+        </div>
+           <div class="caution-text-container">
+               <img src="https://cdn2.iconfinder.com/data/icons/krispicons-modern-flat-icons-freebie/111/7.png" alt="caution" class="caution-image"/>
+               <h4 class="caution-text">Changes here are permanently done</h4>
+           </div>
+           <div>
+            <div class="table-wrapper">
+                <table class="fl-table">
+                    <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>UserName</th>
+                        <th>Role</th>
+                        <th>Delete</th>
+                       
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let item of userList">
+                        <div *ngIf="deleteAdminConfiramtion" class="delete-confiramtion">
+                            <img src="https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678069-sign-error-128.png" class="wrong-icon"/>
+                            <h1>Are you Sure?</h1>
+                            <p>Do you really want to delete this User?</p>
+                            <h1 class="user">{{user}}</h1>
+                            <div>
+                               <button class="delete-confirmation-btn-cancel" (click)="cancelAdmin()">Cancel</button>
+                               <button class="delete-confirmation-btn-delete" (click)="deleteUserByAdmin()">Delete</button>
+                            </div>
+                        </div>
+                        <td>{{item.id}}</td>
+                        <td>{{item.username}}</td>
+                        <td>{{item.role}}</td>
+                        <td><button class="admin-delete-btn" (click)="confirmDelete(item.username,item.id)">DELETE</button></td>
+                        
+                    </tr>
+                    
+                    <tbody>
+                </table>
+            </div>
+           </div>
+           
+           <!-- <div class="login-2-container">
+             <img src="https://dynamic.design.com/asset/logo/62121d53-7ccb-4908-9d28-51abe6f1908c/logo-search-grid-2x?logoTemplateVersion=1&v=638827166201470000&text=TradeSync+Solutions&colorpalette=purple" class="login-image"/> 
+            <form (submit)="register()">
+              <div class="input-container">
+                  <div class="form-label-input">
+                      <label for="user" class="login-label-style" >Username</label>
+                      <input id="user" name="user" type="text" class="login-input-style" placeholder="Enter Username" [(ngModel)]="username" (blur)="usernameNullCheck()"/>
+                      <p class="warning-msg" *ngIf="usernameNull">*Username is required</p>
+                  </div>
+                  <div class="form-label-input">
+                      <label for="pass" class="login-label-style">Password</label>
+                      <input id="pass" name="pass" type="Password" class="login-input-style" placeholder="Enter Password" [(ngModel)]="password" (blur)="passwordNullCheck()"/>
+                      <p class="warning-msg" *ngIf="passwordNull">*Password is required</p>
+                  </div>
+                  <div class="form-label-input">
+                    <label class="login-label-style" for="role">Role</label>
+                       <select id="role" class="login-input-style" [(ngModel)]="role" name="role">
+                          <option value="Role_User">User</option>
+                          <option value="Role_Admin">Admin</option>
+                       </select>
+                  </div>
+                  <p *ngIf="warningadmin" class="warning-msg">*Invalid Credentials!</p>
+                  <p *ngIf="userwarning" class="warning-msg">*User Already exists.Please Login!</p>
+                  <div class="form-label-input">
+                      <button mat-button class="login-btn" type="submit">Register</button>
+                  </div>
+              </div>
+            </form>
+         </div>   -->
+
+
+       </div>
+   </body>
+</html>
+

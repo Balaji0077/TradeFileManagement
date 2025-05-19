@@ -1,0 +1,95 @@
+*{
+    box-sizing:border-box;
+}
+.register-successfull-box{
+    position:fixed;
+    background-image:linear-gradient(to right,#F0A1A1,#B5B0A5,#F0BD24,#E5DDEB);
+    display:flex;
+    flex-direction:row;
+    left:82vw;
+    padding:10px;
+    border-top-left-radius:10px;
+    border-bottom-left-radius:10px;
+}
+.upload-background{
+    background-image:url("https://cdn-icons-png.flaticon.com/512/10320/10320147.png");
+    width:50vw;
+    height:90vh;
+    background-size:cover;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin-top:-85px;
+}
+.upload-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+}
+.upload-heading{
+    padding:0px;
+    margin:0px;
+    font-weight:bolder;
+}
+.filename-choose-container{
+    display:flex;
+    flex-direction:column;
+    
+}
+.choose-text{
+    font-family:"Roboto";
+    font-size:20px;
+    font-weight:bolder;
+    margin-bottom:10px;
+    margin-top:10px;
+}
+.upload-submit-btn{
+    background-color:#000000;
+    color:#ffffff;
+    width:136px;
+    height:36px;
+    outline:none;
+    border-width:none;
+    border-radius:5px;
+    margin-bottom:10px;
+    margin-top:10px;
+    cursor:pointer;
+}
+.upload-file-input{
+    margin-left:20px;
+    
+
+}
+.loader{
+    margin:10px;
+    margin-top:20px;
+}
+.invalid-warning-msg{
+    color:red;
+    margin:3px;
+}
+.upload-image{
+    margin-bottom:10px;
+}
+.upload-button-container{
+    text-align:center;
+}
+.file-choose{
+    width:250px;
+    height:50px;
+    font-weight:bold;
+   
+}
+@media(max-width:993px){
+    .upload-background{
+       background-image:linear-gradient(to right,#F7CF05,#57C785,#EDDD53);
+       position:static;
+       width:100vw;
+       height:90vh;
+       margin-top:0px;
+       
+    }
+    
+}

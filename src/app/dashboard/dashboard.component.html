@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <div class="successfull-box" *ngIf="fileUploadPopup">
+            <h1 class="file-upload-successfully-heading">File Uploaded Successfully</h1>
+            <img src="https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Tick_Mark_Dark-1024.png" class="right-img"/>
+        </div>
+        <div class="successfull-box" *ngIf="updateStatusPopup">
+            <div>
+                <p class="dashboard-filename-heading">{{filename}}</p>
+                <p class="update-successfully-heading"> Updated Successfully to</p>
+                <p class="dashboard-filename-heading">{{ updatedStatus}}</p>
+            </div>
+            <img src="https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Tick_Mark_Dark-1024.png" class="right-img"/>
+        </div>
+        <div class="successfull-box" *ngIf="deleteSuccess">
+            <h1 class="file-upload-successfully-heading">Deleted Successfully</h1>
+            <img src="https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Tick_Mark_Dark-1024.png" class="right-img"/>
+        </div>
+        <div class="successfull-box" *ngIf="deleteCancel">
+            <h1 class="file-upload-successfully-heading">Record Not Removed!</h1>
+            <img src="https://cdn1.iconfinder.com/data/icons/planning-15/256/Decision_2_Front.png" class="right-img"/>
+        </div>
+        <div class="dashboard-container">
+            <app-search class="search-component" ></app-search>
+            <app-viewfiles class="viewfile-component" ></app-viewfiles>
+        </div>
+    </body>
+
+</html>

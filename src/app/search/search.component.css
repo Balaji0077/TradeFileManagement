@@ -1,0 +1,41 @@
+.filter-container{
+    padding:20px;
+}
+.search-file-bar{
+    background-color:#f1f5f9;
+    color:#0f172a;
+    outline:none;
+    font-weight:bold;
+    border-width:0px;
+    border-radius:4px;
+    padding:8px;
+
+}
+.category{
+    background-color:#f1f5f9;
+    outline:none;
+    border-width:0px;
+    padding:8px;
+    font-weight:bold;
+}
+.date-search-container{
+    display:flex;
+
+}
+.date-search-heading{
+    width:75px;
+}
+.apply-filter-btn{
+    border:2px solid #0967d2;
+    outline:none;
+    color:#0967d2;
+    padding:8px;
+    border-radius:4px;
+    background-color: #ffffff;
+    margin:2px 8px 2px 0px;
+    cursor:pointer;
+}
+.apply-filter-btn:hover{
+    background-color:#0967d2;
+    color:#ffffff;
+}

@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Monoton&family=Orbitron&family=Impact");
+*{
+    margin:0px;
+    padding:0px;
+    font-family:"Roboto";
+
+}
+.logo-img{
+    width:8vw;
+    border-radius:5px;
+    cursor:pointer;
+    
+}
+.nav-bar{
+    padding:5px;
+    background-image:linear-gradient(to right,#833AB4,#FD1D1D,#FCB045);
+    width:100vw;
+    top:0px;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+}
+.nav-elements{
+    width:50%;
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    padding:10px;
+}
+.nav-item{
+    font-weight:bolder;
+    font-size:18px;
+    margin-top:10px;
+    margin-left:3px;
+    padding:2px;
+}
+.nav-item:hover{
+    font-weight:400;
+}
+.styleText{
+    text-align:center;
+    font-size:30px;
+    font-weight:900;
+    padding-top:20px;
+    padding-bottom:20px;
+    font-family:"Orbitron";
+}
+.trade-container{
+    display:flex;
+    flex-direction:column;
+    max-height:100vh;
+    overflow:hidden;
+}
+.router-container{
+    overflow-y:auto;
+    margin-top:10px;
+}
+
+.upload-icon{
+    width:30px;
+    height:30px;
+}
+.upload-icon:hover{
+   height:29px;
+}
+.nav-element-icon-container{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    cursor: pointer;
+}
+@media(max-width:769px){
+    .nav-bar{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+    .nav-elements{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+}

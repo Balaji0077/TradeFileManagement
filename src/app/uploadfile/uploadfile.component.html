@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+    <div class="upload-container">  
+     <div class="upload-background">
+        <div>
+            <img src="https://cdn0.iconfinder.com/data/icons/user-interface-2063/24/UI_Essential_icon_expanded-54-128.png"/>
+            <h1 class="upload-heading">Upload  a File</h1>
+            <img src="https://cdn0.iconfinder.com/data/icons/common-file-extensions-audio-documents/24/ext_csv-128.png" class="upload-image"/> 
+        </div>
+        <form enctype="multipart/form-data" (change)="onFileSelected($event)" (submit)="upload($event)">
+            <div class="filename-choose-container">
+                <!-- <label for="fileUpload" class="choose-text">Choose a file:</label> -->
+                <input type="file" id="fileUpload" name="file" class="upload-file-input" class="file-choose">
+                <div class="upload-button-container">
+                    <input type="submit" value="Upload" class="upload-submit-btn" *ngIf="uploadButton">
+                </div>
+            </div>
+            <p *ngIf="uploadFileErrMsg" class="invalid-warning-msg">*Invalid File Format</p>
+            <mat-progress-bar mode="indeterminate" *ngIf="loading" class="loader"></mat-progress-bar>
+        </form>
+       
+    </div>
+   </div> 
+        
+    </body>
+</html>

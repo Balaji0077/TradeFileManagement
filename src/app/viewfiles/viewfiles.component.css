@@ -1,0 +1,29 @@
+*{
+    font-family:"Roboto";
+}
+.table-element{
+    cursor:pointer;
+}
+table {
+    width: 80%;
+  }
+
+  .view-container{
+     margin:20px;
+     border-radius:8px;
+  }
+.element-sideheading{
+    font-weight:bold;
+}  
+.info-icon{
+    width:20px;
+    height:20px;
+}
+.info-container{
+    text-align:left;
+    margin-left:10px;
+}
+.info-icon:hover{
+   width:30px;
+   height:30px;
+}

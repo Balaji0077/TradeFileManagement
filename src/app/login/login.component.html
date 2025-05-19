@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<div class="login-component">
+    <div class="register-successfull-box" *ngIf="registerDialog">
+        <h1 class="user-successfully-heading">Successfully Registered</h1>
+        <img src="https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Tick_Mark_Dark-512.png" class="right-img"/>
+    </div>
+    
+    <div class="login-1">
+        <div class="login-1-container">
+            <!-- <h1 class="login1-heading">Trade File Management</h1> -->
+             <h1 class="login1-heading">LOGIN</h1>
+            <img src="https://blacknight.blog/wp-content/uploads/2022/01/we-transfer-file-sharing-alternatives-1-500x383@2x.jpg" class="file-trade-image"/>
+        </div>
+       
+
+    </div>
+
+    <div class="login-2">
+       <div class="login-2-container">
+          <!-- <img src="https://dynamic.design.com/asset/logo/62121d53-7ccb-4908-9d28-51abe6f1908c/logo-search-grid-2x?logoTemplateVersion=1&v=638827166201470000&text=TradeSync+Solutions&colorpalette=purple" class="login-image"/> -->
+          <form (submit)="login()">
+            <div class="input-container">
+                <div class="form-label-input">
+                    <label for="user" class="login-label-style" >Username</label>
+                    <input id="user" name="user" type="text" class="login-input-style" placeholder="Enter Username" [(ngModel)]="username" (blur)="userNameNullCheck()"/>
+                    <p class="warning-msg" *ngIf="userNameNull">*Username is required</p>
+                </div>
+                <div class="form-label-input">
+                    <label for="pass" class="login-label-style">Password</label>
+                    <input id="pass" name="pass" type="Password" class="login-input-style" placeholder="Enter Password" [(ngModel)]="password" (blur)="passwordNullCheck()"/>
+                    <p class="warning-msg" *ngIf="passwordNull">*Password is required</p>
+                </div>
+                <p class="warning-msg" *ngIf="usernamepasswordCheck">*Username and Password are Incorrect!</p>
+                <div class="form-label-input">
+                    <button mat-button class="login-btn" type="submit">Login</button>
+                </div>
+            </div>
+          </form>
+       </div>
+       <div class="newuser-signup-container">
+          <p class="new-user-text">New User?</p>
+          <p class="sign-up-btn" [routerLink]="'/register'">SignUp</p>
+       </div>
+    </div>
+
+</div>
+</body>
+</html>
+
+
