@@ -4,4 +4,5 @@ The system provides features to update trade records, delete unnecessary files, 
 It ensures security with authentication and role-based access control, allowing only authorized users to make changes.
 
 Backend-->TradeFileManagement
+
 Frontend-->src
